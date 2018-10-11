@@ -1,29 +1,41 @@
 package com.example.amikom.dandiiiii;
 
-import android.app.backup.SharedPreferencesBackupHelper;
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
-import com.example.amikom.dandiiiii.util.LoginActivity;
-import com.example.amikom.dandiiiii.util.PreferencesHelper;
+public class MainActivity extends AppCompatActivity {
 
-public class SplashActivity extends AppCompatActivity {
-    PreferencesHelper instance;
+
     @Override
-    protected void onCreate(Bundle SavedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-        instance = PreferencesHelper.getInstance(getApplicationContext());
-        int splashInterval = 10;
-        new Handler().postDelayed(() -> {
-            if (instance.isLogin()) {
-                starActivity(new Intent(SplashActivity.this,LoginActivity.class));
-            }else  {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-            }
-        },splashInterval);
+        setContentView(R.layout.activity_main);
+        Bundle kirim = getIntent().getExtras();
+        TextView nama = (TextView) findViewById(R.id.user1);
+        nama.setText(kirim.getCharSequence("nama"));
+
+
+
+    }
+
+    public void tambahuser(View view) {
+
+    }
+
+    public void list(View view) {
+    }
+
+    public void kefragment(View view) {
+        Intent intent = new Intent(MainActivity.this,Main3Activity.class);
+        startActivity(intent);
+    }
+
+    public void Pindah(View view) {
+        Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+        startActivity(intent);
 
     }
 }

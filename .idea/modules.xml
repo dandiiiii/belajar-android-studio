@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dandiiiii.iml" filepath="$PROJECT_DIR$/dandiiiii.iml" />
+      <module fileurl="file://D:\dandi\belajar-android-studio\app\app.iml" filepath="D:\dandi\belajar-android-studio\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/belajar-android-studio.iml" filepath="$PROJECT_DIR$/belajar-android-studio.iml" />
+      <module fileurl="file://D:\dandi\belajar-android-studio\dandiiiii.iml" filepath="D:\dandi\belajar-android-studio\dandiiiii.iml" />
     </modules>
   </component>
 </project>
